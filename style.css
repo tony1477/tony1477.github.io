@@ -10,3 +10,8 @@
 section {
   padding-top: 5rem;
 }
+
+
+.project-image:hover {
+  cursor: pointer;
+}
