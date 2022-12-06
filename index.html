@@ -72,10 +72,10 @@
         </div>
         <div class="row justify-content-center fs-5 text-center">
           <div class="col-md-4">
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit voluptatem dolore voluptates. Voluptatum pariatur qui eaque ratione excepturi corporis itaque.</p>
+            <p><strong>Martoni Firman</strong>, personal yang haus ilmu pengetahuan, <em>especially</em> dalam bidang IT. Sekarang sedang mendalami bidang Web Programming, dan juga dalam bahasa <em>programming </em>lainnya. </p>
           </div>
           <div class="col-md-4">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nam eum beatae repudiandae nulla nemo velit voluptatem? Voluptates eaque obcaecati ipsum, et repellendus nam laborum.</p>
+            <p>Selain ketertarikan dalam bidang Programming, saya juga terus update mengenai perkembangan hardware dan software, karena basic sebelum mendalami <em>programming</em> adalah di IT Infrastructure (<em>Networking, Operation System</em>).</p>
           </div>
         </div>
       </div>
@@ -118,7 +118,7 @@
             <div class="card project-image">
               <img src="images/projects/kangaroospringbed.png" class="card-img-top" alt="Project 3" onclick="openLink('mifsaka.com')" />
               <div class="card-body">
-                <p class="card-text">Kangaroo Springbed</p>
+                <p class="card-text">Kangaroo Springbed</p> 
               </div>
             </div>
           </div>
@@ -161,20 +161,33 @@
         </div>
         <div class="row justify-content-center">
           <div class="col-md-6">
-            <form>
+            <div class="alert alert-success alert-dismissible fade show d-none my-alert" role="alert">
+              <strong>Terimakasih! </strong> Pesan Anda sudah terkirim, kami akan segera menghubungi Anda. Atau email ke martonif1107@gmail.com agar lebih <em>fast reponse.</em>
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <form name="submit-to-google-sheet">
               <div class="mb-3">
                 <label for="name" class="form-label">Nama Lengkap</label>
-                <input type="text" class="form-control" id="name" aria-describedby="name" />
+                <input type="text" name="firstname" class="form-control" id="fname" aria-describedby="name" />
+                <input type="hidden" name="lastname" class="form-control" id="lname" aria-describedby="name" />
               </div>
               <div class="mb-3">
                 <label for="email" class="form-label">Email </label>
-                <input type="email" class="form-control" id="email" aria-describedby="email" />
+                <input type="email" name="email" class="form-control" id="email" aria-describedby="email" />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Phone </label>
+                <input type="text" name="phone" class="form-control" id="phone" aria-describedby="phone" />
               </div>
               <div class="mb-3">
                 <label for="pesan" class="form-label">Pesan</label>
-                <textarea class="form-control" id="pesan" rows="3"></textarea>
+                <textarea class="form-control" name="message" id="pesan" rows="3"></textarea>
               </div>
-              <button type="submit" class="btn btn-primary">Kirim</button>
+              <button type="submit" class="btn btn-primary btn-kirim">Kirim</button>
+              <button class="btn btn-primary btn-loading d-none" type="button" disabled>
+                <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                Loading...
+              </button>
             </form>
           </div>
         </div>
@@ -197,6 +210,32 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
   </body>
   <script type="text/javascript">
+
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbzx_swSia46vXTcl_HOZsIbK11C3Qt1ciXEjotCzz2F7TvpYYhqoNI74bzTDHg-QKRRZw/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const btnKirim = document.querySelector('.btn-kirim')
+  const btnLoading = document.querySelector('.btn-loading')
+  const myAlert = document.querySelector('.my-alert')
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    // submit clicked
+    btnLoading.classList.toggle('d-none')
+    btnKirim.classList.toggle('d-none')
+
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        // success
+        console.log('Success!', response)
+        btnLoading.classList.toggle('d-none')
+        btnKirim.classList.toggle('d-none')
+        myAlert.classList.toggle('d-none')
+        // reset form
+        form.reset();
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+
     function openLink(url) {
       window.open('http://'+url)
     }
