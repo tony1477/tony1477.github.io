@@ -1,243 +1,488 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Short Profile - Martoni Firman</title>
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/aos.css">
+    <link rel="stylesheet" href="./assets/css/line-awesome.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
 
-    <!-- Bootsrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css" />
+<body data-bs-spy="scroll" data-bs-target=".navbar">
 
-    <!-- My CSS -->
-    <link rel="stylesheet" href="style.css" />
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container flex-lg-column">
+            <a class="navbar-brand mx-lg-auto mb-lg-4" href="#">
+                <span class="h3 fw-bold d-block d-lg-none">Martoni F's Profile</span>
+                <img src="./images/martonifirman.jpg" class="d-none d-lg-block rounded-circle img-profile" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto flex-lg-column text-lg-center">
 
-    <title>My Portfolio | Martoni Firman</title>
-  </head>
-  <body id="home">
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="#">Martoni Firman</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="https://github.com/tony1477">Github Repo</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#home">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#projects">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
-            </li>
-          </ul>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#work">Work</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#reviews">Reviews</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#blog">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li> -->
+
+                </ul>
+            </div>
         </div>
-      </div>
     </nav>
-    <!-- Akhir Navbar -->
+    <!-- //NAVBAR -->
 
-    <!--  Jumbotron -->
-    <section class="jumbotron text-center">
-      <img src="images/martonifirman.jpg" alt="Martoni Firman" width="180" class="rounded-circle img-thumbnail" />
-      <h1 class="display-4">Martoni Firman</h1>
-      <p class="lead">Fullstack Web Developer | Analyst System</p>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path
-          fill="#ffffff"
-          fill-opacity="1"
-          d="M0,224L40,229.3C80,235,160,245,240,208C320,171,400,85,480,64C560,43,640,85,720,138.7C800,192,880,256,960,250.7C1040,245,1120,171,1200,154.7C1280,139,1360,181,1400,202.7L1440,224L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"
-        ></path>
-      </svg>
-    </section>
-    <!-- Akhir Jumbotron -->
+    <!-- CONTENT WRAPPER -->
+    <div id="content-wrapper">
 
-    <!-- About -->
-    <section id="about">
-      <div class="container">
-        <div class="row text-center mb-3">
-          <div class="col">
-            <h2>About Me</h2>
-          </div>
-        </div>
-        <div class="row justify-content-center fs-5 text-center">
-          <div class="col-md-4">
-            <p><strong>Martoni Firman</strong>, personal yang haus ilmu pengetahuan, <em>especially</em> dalam bidang IT. Sekarang sedang mendalami bidang Web Programming, dan juga dalam bahasa <em>programming </em>lainnya. </p>
-          </div>
-          <div class="col-md-4">
-            <p>Selain ketertarikan dalam bidang Programming, saya juga terus update mengenai perkembangan hardware dan software, karena basic sebelum mendalami <em>programming</em> adalah di IT Infrastructure (<em>Networking, Operation System</em>).</p>
-          </div>
-        </div>
-      </div>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path
-          fill="#e2edff"
-          fill-opacity="1"
-          d="M0,128L40,128C80,128,160,128,240,128C320,128,400,128,480,149.3C560,171,640,213,720,234.7C800,256,880,256,960,234.7C1040,213,1120,171,1200,165.3C1280,160,1360,192,1400,208L1440,224L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"
-        ></path>
-      </svg>
-    </section>
-    <!-- Akhir About -->
+        <!-- HOME -->
+        <section id="home" class="full-height px-lg-5">
 
-    <!-- Projects -->
-    <section id="projects">
-      <div class="container">
-        <div class="row text-center mb-3">
-          <div class="col">
-            <h2>My Projects</h2>
-          </div>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-md-4 mb-3">
-            <div class="card project-image">
-              <img src="images/projects/ics.lps.png" class="card-img-top" alt="Project 4" onclick="openLink('lps.go.id')" />
-              <div class="card-body">
-                <p class="card-text">Integrated Core System (ICS) LPS</p>
-              </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10">
+                        <h1 class="display-4 fw-bold" data-aos="fade-up">I'M A <span class="text-brand" id="position">Fullstack Web Developer</span> From Pekanbaru, Indonesia</h1>
+                        <p class="lead mt-2 mb-4" data-aos="fade-up" data-aos-delay="300"><span class="fw-bold fst-italic">Martoni Firman</span>, And I craft
+                            high-performing and delightful experiences tailored and conversion-focused</p>
+                        <div data-aos="fade-up" data-aos-delay="600">
+                            <a href="#work" class="btn btn-brand me-3">Explore My Work</a>
+                            <a href="https://wa.me/6285376361879" class="link-custom"><i class="las la-phone"></i> | <i class="lab la-whatsapp"></i>: (+62) 853 7636 1879</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="col-md-4 mb-3">
-            <div class="card project-image">
-              <img src="images/projects/akagroup.co.id.png" class="card-img-top" alt="Project 1" onclick="openLink('akagroup.co.id')"/>
-              <div class="card-body">
-                Web Company Profile - AKAGROUP</p>
-              </div>
+
+        </section>
+        <!-- //HOME -->
+
+        <!-- SERVICES -->
+        <section id="services" class="full-height px-lg-5">
+            <div class="container">
+
+                <div class="row pb-4" data-aos="fade-up">
+                    <div class="col-xl-6 col-lg-8">
+                        <h6 class="text-brand">SERVICES</h6>
+                        <h1 class="link-custom">Services That I Provide</h1>
+                    </div>
+                </div>
+
+                <div class="row gy-4">
+
+                    <div class="col-md-4" data-aos="fade-up">
+                        <div class="service p-4 bg-base rounded-4 shadow-effect">
+                            <div class="iconbox rounded-4">
+                                <i class="las la-feather"></i>
+                            </div>
+                            <h5 class="mt-4 mb-2">UX Design</h5>
+                            <p>I craft high-performing and delightful experiences tailored and conversion-focused</p>
+                            <a href="#" class="link-custom">Read More</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                        <div class="service p-4 bg-base rounded-4 shadow-effect">
+                            <div class="iconbox rounded-4">
+                                <i class="las la-pencil-ruler"></i>
+                            </div>
+                            <h5 class="mt-4 mb-2">Branding</h5>
+                            <p>I craft high-performing and delightful experiences tailored and conversion-focused</p>
+                            <a href="#" class="link-custom">Read More</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
+                        <div class="service p-4 bg-base rounded-4 shadow-effect">
+                            <div class="iconbox rounded-4">
+                                <i class="las la-laptop-code"></i>
+                            </div>
+                            <h5 class="mt-4 mb-2">Web Designing</h5>
+                            <p>I craft high-performing and delightful experiences tailored and conversion-focused</p>
+                            <a href="#" class="link-custom">Read More</a>
+                        </div>
+                    </div>
+
+                </div>
+
             </div>
-          </div>
-          <div class="col-md-4 mb-3">
-            <div class="card project-image">
-              <img src="images/projects/kangaroospringbed.png" class="card-img-top" alt="Project 3" onclick="openLink('mifsaka.com')" />
-              <div class="card-body">
-                <p class="card-text">Kangaroo Springbed</p> 
-              </div>
+        </section>
+        <!-- SERVICES -->
+
+        <!-- WORK -->
+        <section id="work" class="full-height px-lg-5">
+            <div class="container">
+
+                <div class="row pb-4" data-aos="fade-up">
+                    <div class="col-xl-4 col-lg-8">
+                        <h6 class="text-brand">WORK</h6>
+                        <h1 class="link-custom">My Recent Projects</h1>
+                    </div>
+                </div>
+
+                <div class="row gy-4">
+
+                    <div class="col-md-6" data-aos="fade-up">
+                        <div class="card-custom rounded-4 bg-base shadow-effect">
+                            <div class="card-custom-image rounded-4">
+                                <a href="https://mifsaka.com/" target="_blank"><img class="rounded-4" src="./assets/images/mf-aka1.jpg" alt=""></a>
+                            </div>
+                            <div class="card-custom-content p-4">
+                                <h4>ERP System AKA GROUP</h4>
+                                <p>Innovation that exceeds expectations. Astra is a true template equiqed with all the elements you could ever need to put together</p>
+                                <a href="#" class="link-custom">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+                        <div class="card-custom rounded-4 bg-base shadow-effect">
+                            <div class="card-custom-image rounded-4">
+                                <img class="rounded-4" src="./assets/images/project-2.png" alt="">
+                            </div>
+                            <div class="card-custom-content p-4">
+                                <h4>Startup Landing Page</h4>
+                                <p>Innovation that exceeds expectations. Astra is a true template equiqed with all the elements you could ever need to put together</p>
+                                <a href="#" class="link-custom">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6" data-aos="fade-up">
+                        <div class="card-custom rounded-4 bg-base shadow-effect">
+                            <div class="card-custom-image rounded-4">
+                                <img class="rounded-4" src="./assets/images/project-3.png" alt="">
+                            </div>
+                            <div class="card-custom-content p-4">
+                                <h4>Startup Landing Page</h4>
+                                <p>Innovation that exceeds expectations. Astra is a true template equiqed with all the elements you could ever need to put together</p>
+                                <a href="#" class="link-custom">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+                        <div class="card-custom rounded-4 bg-base shadow-effect">
+                            <div class="card-custom-image rounded-4">
+                                <img class="rounded-4" src="./assets/images/project-4.png" alt="">
+                            </div>
+                            <div class="card-custom-content p-4">
+                                <h4>Startup Landing Page</h4>
+                                <p>Innovation that exceeds expectations. Astra is a true template equiqed with all the elements you could ever need to put together</p>
+                                <a href="#" class="link-custom">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-          </div>
-          <div class="col-md-4 mb-3">
-            <div class="card project-image">
-              <img src="images/projects/erp_akagroup.png" class="card-img-top" alt="Project 2" onclick="openLink('mifsaka.com/agemlive')" />
-              <div class="card-body">
-                <p class="card-text">ERP System - AKAGROUP</p>
-              </div>
+        </section>
+        <!-- //WORK -->
+
+        <!-- ABOUT -->
+        <section id="about" class="full-height px-lg-5">
+            <div class="container">
+
+                <div class="row pb-4" data-aos="fade-up">
+                    <div class="col-xl-6 col-lg-8">
+                        <h6 class="text-brand">ABOUT</h6>
+                        <h1 class="link-custom">My Education & Experiance</h1>
+                    </div>
+                </div>
+
+                <div class="row gy-5">
+                    <div class="col-lg-6">
+
+                        <h3 class="mb-4" data-aos="fade-up" data-aos-delay="300">Education</h3>
+                        <div class="row gy-4">
+
+                            <div class="col-12" data-aos="fade-up" data-aos-delay="600">
+                                <div class="bg-base p-4 rounded-4 shadow-effect">
+                                    <h4>Master of Software Engineering</h4>
+                                    <p class="text-brand mb-2">De Mars University Venston Bay (2015 - 2020)</p>
+                                    <p class="mb-0">All we are more and design lorem ipsum dolor creativity sit amet consectetur adipisicing elit</p>
+                                </div>
+                            </div>
+
+                            <div class="col-12" data-aos="fade-up" data-aos-delay="600">
+                                <div class="bg-base p-4 rounded-4 shadow-effect">
+                                    <h4>Master of Software Engineering</h4>
+                                    <p class="text-brand mb-2">De Mars University Venston Bay (2015 - 2020)</p>
+                                    <p class="mb-0">All we are more and design lorem ipsum dolor creativity sit amet consectetur adipisicing elit</p>
+                                </div>
+                            </div>
+
+                            <div class="col-12" data-aos="fade-up" data-aos-delay="600">
+                                <div class="bg-base p-4 rounded-4 shadow-effect">
+                                    <h4>Master of Software Engineering</h4>
+                                    <p class="text-brand mb-2">De Mars University Venston Bay (2015 - 2020)</p>
+                                    <p class="mb-0">All we are more and design lorem ipsum dolor creativity sit amet consectetur adipisicing elit</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-6">
+
+                        <h3 class="mb-4" data-aos="fade-up" data-aos-delay="300">Experiance</h3>
+                        <div class="row gy-4">
+
+                            <div class="col-12" data-aos="fade-up" data-aos-delay="600">
+                                <div class="bg-base p-4 rounded-4 shadow-effect">
+                                    <h4>Applications developer</h4>
+                                    <p class="text-brand mb-2">Twitter (2018 - 2020)</p>
+                                    <p class="mb-0">All we are more and design lorem ipsum dolor creativity sit amet consectetur adipisicing elit</p>
+                                </div>
+                            </div>
+
+                            <div class="col-12" data-aos="fade-up" data-aos-delay="600">
+                                <div class="bg-base p-4 rounded-4 shadow-effect">
+                                    <h4>Applications developer</h4>
+                                    <p class="text-brand mb-2">Twitter (2018 - 2020)</p>
+                                    <p class="mb-0">All we are more and design lorem ipsum dolor creativity sit amet consectetur adipisicing elit</p>
+                                </div>
+                            </div>
+
+                            <div class="col-12" data-aos="fade-up" data-aos-delay="600">
+                                <div class="bg-base p-4 rounded-4 shadow-effect">
+                                    <h4>Applications developer</h4>
+                                    <p class="text-brand mb-2">Twitter (2018 - 2020)</p>
+                                    <p class="mb-0">All we are more and design lorem ipsum dolor creativity sit amet consectetur adipisicing elit</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
             </div>
-          </div>
-          
-          <div class="col-md-4 mb-3">
-            <div class="card project-image">
-              <img src="images/projects/5.jpg" class="card-img-top" alt="Project 5" />
-              <div class="card-body">
-                <p class="card-text">Lainnya..</p>
-              </div>
+        </section>
+        <!-- //ABOUT -->
+
+        <!-- REVIEWS -->
+        <!-- <section id="reviews" class="full-height px-lg-5">
+            <div class="container">
+
+                <div class="row pb-4" data-aos="fade-up">
+                    <div class="col-xl-6 col-lg-8">
+                        <h6 class="text-brand">REVIEWS</h6>
+                        <h1 class="link-custom">What our subscribers say</h1>
+                    </div>
+                </div>
+
+                <div class="row gy-4">
+
+                    <div class="col-md-4" data-aos="fade-up">
+
+                        <div class="review shadow-effect bg-base p-4 rounded-4">
+                            <div class="text-brand h5">
+                                <i class="las la-star"></i>
+                                <i class="las la-star"></i>
+                                <i class="las la-star"></i>
+                                <i class="las la-star"></i>
+                                <i class="las la-star"></i>
+                            </div>
+                            <p class="my-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel quae facilis fugiat molestias ab illum excepturi, qui optio modi asperiores, delectus maiores!</p>
+                            <div class="person">
+                                <h5 class="mb-0">Jon Doe</h5>
+                                <p class="mb-0">Twitter</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+
+                        <div class="review shadow-effect bg-base p-4 rounded-4">
+                            <div class="text-brand h5">
+                                <i class="las la-star"></i>
+                                <i class="las la-star"></i>
+                                <i class="las la-star"></i>
+                                <i class="las la-star"></i>
+                                <i class="las la-star"></i>
+                            </div>
+                            <p class="my-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel quae facilis fugiat molestias ab illum excepturi, qui optio modi asperiores, delectus maiores!</p>
+                            <div class="person">
+                                <h5 class="mb-0">Jon Doe</h5>
+                                <p class="mb-0">Twitter</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
+
+                        <div class="review shadow-effect bg-base p-4 rounded-4">
+                            <div class="text-brand h5">
+                                <i class="las la-star"></i>
+                                <i class="las la-star"></i>
+                                <i class="las la-star"></i>
+                                <i class="las la-star"></i>
+                                <i class="las la-star"></i>
+                            </div>
+                            <p class="my-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel quae facilis fugiat molestias ab illum excepturi, qui optio modi asperiores, delectus maiores!</p>
+                            <div class="person">
+                                <h5 class="mb-0">Jon Doe</h5>
+                                <p class="mb-0">Twitter</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
             </div>
-          </div>
-        </div>
-      </div>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path
-          fill="#ffffff"
-          fill-opacity="1"
-          d="M0,32L40,37.3C80,43,160,53,240,90.7C320,128,400,192,480,181.3C560,171,640,85,720,74.7C800,64,880,128,960,154.7C1040,181,1120,171,1200,154.7C1280,139,1360,117,1400,106.7L1440,96L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"
-        ></path>
-      </svg>
-    </section>
-    <!-- Akhir Projects -->
+        </section> -->
+        <!-- //REVIEWS -->
 
-    <!-- Contact -->
-    <section id="contact">
-      <div class="container">
-        <div class="row text-center mb-3">
-          <div class="col">
-            <h2>Contact Me</h2>
-          </div>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-md-6">
-            <div class="alert alert-success alert-dismissible fade show d-none my-alert" role="alert">
-              <strong>Terimakasih! </strong> Pesan Anda sudah terkirim, kami akan segera menghubungi Anda. Atau email ke martonif1107@gmail.com agar lebih <em>fast reponse.</em>
-              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        <!-- BLOG -->
+        <!-- <section id="blog" class="full-height px-lg-5">
+            <div class="container">
+
+                <div class="row pb-4" data-aos="fade-up">
+                    <div class="col-lg-8">
+                        <h6 class="text-brand">BLOG</h6>
+                        <h1 class="link-custom">My BLog Posts</h1>
+                    </div>
+                </div>
+
+                <div class="row gy-4">
+
+                    <div class="col-md-4" data-aos="fade-up">
+                        <div class="card-custom rounded-4 bg-base shadow-effect">
+                            <div class="card-custom-image rounded-4">
+                                <img class="rounded-4" src="./assets/images/blog-post-1.jpg" alt="">
+                            </div>
+                            <div class="card-custom-content p-4">
+                                <p class="text-brand mb-2">20 Dec, 2022</p>
+                                <h5 class="mb-4">Design a creative landing page using Bootstrap 5</h5>
+                                <a href="#" class="link-custom">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                        <div class="card-custom rounded-4 bg-base shadow-effect">
+                            <div class="card-custom-image rounded-4">
+                                <img class="rounded-4" src="./assets/images/blog-post-2.jpg" alt="">
+                            </div>
+                            <div class="card-custom-content p-4">
+                                <p class="text-brand mb-2">20 Dec, 2022</p>
+                                <h5 class="mb-4">Design a creative landing page using Bootstrap 5</h5>
+                                <a href="#" class="link-custom">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
+                        <div class="card-custom rounded-4 bg-base shadow-effect">
+                            <div class="card-custom-image rounded-4">
+                                <img class="rounded-4" src="./assets/images/blog-post-3.jpg" alt="">
+                            </div>
+                            <div class="card-custom-content p-4">
+                                <p class="text-brand mb-2">20 Dec, 2022</p>
+                                <h5 class="mb-4">Design a creative landing page using Bootstrap 5</h5>
+                                <a href="#" class="link-custom">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
             </div>
-            <form name="submit-to-google-sheet">
-              <div class="mb-3">
-                <label for="name" class="form-label">Nama Lengkap</label>
-                <input type="text" name="firstname" class="form-control" id="fname" aria-describedby="name" />
-                <input type="hidden" name="lastname" class="form-control" id="lname" aria-describedby="name" />
-              </div>
-              <div class="mb-3">
-                <label for="email" class="form-label">Email </label>
-                <input type="email" name="email" class="form-control" id="email" aria-describedby="email" />
-              </div>
-              <div class="mb-3">
-                <label for="email" class="form-label">Phone </label>
-                <input type="text" name="phone" class="form-control" id="phone" aria-describedby="phone" />
-              </div>
-              <div class="mb-3">
-                <label for="pesan" class="form-label">Pesan</label>
-                <textarea class="form-control" name="message" id="pesan" rows="3"></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary btn-kirim">Kirim</button>
-              <button class="btn btn-primary btn-loading d-none" type="button" disabled>
-                <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
-                Loading...
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path
-          fill="#0d6efd"
-          fill-opacity="1"
-          d="M0,256L40,224C80,192,160,128,240,138.7C320,149,400,235,480,245.3C560,256,640,192,720,176C800,160,880,192,960,224C1040,256,1120,288,1200,298.7C1280,309,1360,299,1400,293.3L1440,288L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"
-        ></path>
-      </svg>
-    </section>
-    <!-- Akhir Contact -->
+        </section> -->
+        <!-- //BLOG -->
 
-    <!-- Footer -->
-    <footer class="bg-primary text-white text-center pb-5">
-      <p>Created with <i class="bi bi-heart-fill text-danger"></i> by <a href="https://www.instagram.com/martoni.f" class="text-white fw-bold">Martoni Firman</a></p>
-    </footer>
-    <!-- Akhir Footer -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-  </body>
-  <script type="text/javascript">
+        <!-- CONTACT -->
+        <!-- <section id="contact" class="full-height px-lg-5">
+            <div class="container">
 
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbzx_swSia46vXTcl_HOZsIbK11C3Qt1ciXEjotCzz2F7TvpYYhqoNI74bzTDHg-QKRRZw/exec'
-  const form = document.forms['submit-to-google-sheet']
-  const btnKirim = document.querySelector('.btn-kirim')
-  const btnLoading = document.querySelector('.btn-loading')
-  const myAlert = document.querySelector('.my-alert')
+                <div class="row justify-content-center text-center">
+                    <div class="col-lg-8 pb-4" data-aos="fade-up">
+                        <h6 class="text-brand">CONTACT</h6>
+                        <h1>Interested in working together? Let's talk
+                        </h1>
+                    </div>
 
-  form.addEventListener('submit', e => {
-    e.preventDefault()
-    // submit clicked
-    btnLoading.classList.toggle('d-none')
-    btnKirim.classList.toggle('d-none')
+                    <div class="col-lg-8" data-aos="fade-up" data-aos-delay="300">
+                        <form action="#" class="row g-lg-3 gy-3">
+                            <div class="form-group col-md-6">
+                                <input type="text" class="form-control" placeholder="Enter your name">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input type="email" class="form-control" placeholder="Enter your email">
+                            </div>
+                            <div class="form-group col-12">
+                                <input type="text" class="form-control" placeholder="Enter subject">
+                            </div>
+                            <div class="form-group col-12">
+                                <textarea name="" rows="4" class="form-control" placeholder="Enter your message"></textarea>
+                            </div>
+                            <div class="form-group col-12 d-grid">
+                                <button type="submit" class="btn btn-brand">Contact me</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
 
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => {
-        // success
-        console.log('Success!', response)
-        btnLoading.classList.toggle('d-none')
-        btnKirim.classList.toggle('d-none')
-        myAlert.classList.toggle('d-none')
-        // reset form
-        form.reset();
-      })
-      .catch(error => console.error('Error!', error.message))
-  })
 
-    function openLink(url) {
-      window.open('http://'+url)
-    }
-  </script>
+            </div>
+        </section> -->
+        <!-- //CONTACT -->
+
+        <!-- FOOTER -->
+        <footer class="py-5 px-lg-5">
+            <div class="container">
+                <div class="row gy-4 justify-content-between">
+                    <div class="col-auto">
+                        
+                    </div>
+                    <div class="col-auto">
+                        <div class="social-icons">
+                            <a href="#"><i class="lab la-instagram"></i></a>
+                            <a href="#"><i class="lab la-github"></i></a>
+                            <a href="#"><i class="lab la-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- //FOOTER -->
+
+    </div>
+    <!-- //CONTENT WRAPPER -->
+
+
+
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/aos.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+
 </html>
