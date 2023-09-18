@@ -18,3 +18,34 @@ let job = 'Fullstack Programmer'
 window.onload = () => {
   position.innerHTML = job
 }
+
+const btnMore = document.querySelectorAll('.expand-project')
+btnMore.forEach( btn => {
+  btn.addEventListener('click', function() {
+    showDetail(this)
+  })
+})
+
+const linkMore = document.querySelectorAll('.more')
+linkMore.forEach(txt => {
+  txt.addEventListener('click', function(){
+    showList(this)
+  })
+})
+
+const showDetail = (el) => {
+
+  const element = el.previousElementSibling
+  const dots = element.querySelector('#dots')
+  const moreText = element.querySelector("#more");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    el.innerHTML = "Read more";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    el.innerHTML = "Read less";
+    moreText.style.display = "inline";
+  }
+}

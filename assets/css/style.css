@@ -45,6 +45,11 @@ img {
     color: var(--color-point);
 }
 
+.text-heading {
+    color: var(--color-body);
+    font-weight: 600;
+}
+
 .bg-base {
     background-color: var(--color-base);
 }
@@ -228,4 +233,15 @@ h1:not(.display-4):hover::after {
     background-color: var(--color-base);
     border-radius: 100px;
     font-size: 24px;
+}
+
+#more {display: none;}
+.more, .less {
+    color: var(--color-brand);
+    font-style: italic;
+    cursor: pointer;
+}
+
+.less {
+    display: none;
 }
